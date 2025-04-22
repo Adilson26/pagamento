@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento PIX</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 140px;
+            margin-top: 20px;
+        }
+
+        .pix-logo {
+            width: 120px;
+            margin-top: 20px;
+        }
+
+        .info-text {
+            color: #333;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #4CAF50;
+            font-size: 20px;
+        }
+
+        .button {
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 22px;
+            margin-top: 30px;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            width: 70%;
+        }
+
+        .copy-button {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .copy-button:hover {
+            background-color: #218838;
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .confirm-button {
+            background-color: #34b56b;
+            color: white;
+        }
+
+        .confirm-button:hover {
+            background-color: #2c9a58;
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .blink {
+            animation: blink-animation 1s steps(5, start) infinite;
+            color: #28a745;
+            font-size: 22px;
+            margin-top: 15px;
+        }
+
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pagamento via PIX</h1>
+        <img src="https://i.postimg.cc/L6SSVPxp/Sem-t-tulo-1.png" alt="Logo" class="logo">
+        <p class="info-text">Para realizar seu pagamento, use a chave PIX abaixo:</p>
+        <p class="info-text">Esta chave PIX é o número do meu telefone.</p> <!-- Nova frase explicativa -->
+        <p class="highlight">Chave PIX: Adilson da Silveira</p>
+        <img src="https://i.postimg.cc/L6VpQsWZ/pix.png" alt="Logo Pix" class="pix-logo">
+        <p class="blink">Clique no botão abaixo para copiar sua chave PIX:</p>
+        <a class="button copy-button" href="javascript:void(0);" onclick="copyToClipboard('51997548695');">Copiar chave PIX</a>
+        <br><br>
+        <p>Após o pagamento, clique no botão abaixo para confirmar e enviar seu pedido:</p>
+        <a href="https://api.whatsapp.com/send?phone=5551997548695&text=Acabei%20de%20realizar%20o%20pagamento%20de%20um%20pacote%20pelo%20cat%C3%A1logo,%20o%20Nome%20do%20Pacote%20%C3%A9..." class="button confirm-button" target="_blank">Confirmar Pagamento</a>
+        <div class="footer">
+            <p>Obrigado por valorizar o meu trabalho. Que Deus abençoe sua vida e seus negócios! 🙏</p>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert("Chave PIX copiada!");
+        }
+    </script>
+</body>
+</html>
